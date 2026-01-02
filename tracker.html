@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Readify | Reading Progress Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+  <link rel="icon" href="pic/icon.jpg" type="image/jpg">
+
+  <link rel="stylesheet" href="Css/traker.css">
+    <link rel="stylesheet" href="Css/nav.css">
+
+  <script src="js/traker.js"></script>
+    <script src="js/nav.js" defer></script>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="nav-header">
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="pic/logo.png" alt="Readify Logo" class="nav-logo">
+      <span class="brand">Readify</span>
+    </div>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="explorer.html">Explorer</a></li>
+      <li><a href="tracker.html" class="active">Tracker</a></li>
+      <li><a href="recommender.html">Recommender</a></li>
+      <li><a href="flow.html">Reading Flow</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- PAGE TITLE -->
+<section class="header-section">
+  <h1>Reading Progress Tracker</h1>
+  <p>Track your reading journey and stay motivated 📖</p>
+</section>
+
+<!-- TRACKER CARD -->
+<section class="tracker-container">
+
+  <form id="trackerForm">
+
+    <label>Total Pages in Book</label>
+    <input type="number" id="totalPages" placeholder="e.g., 350" required>
+
+    <label>Pages Read So Far</label>
+    <input type="number" id="pagesRead" placeholder="e.g., 120" required>
+
+    <label>Daily Reading Speed (pages/day)</label>
+    <input type="number" id="readingSpeed" placeholder="e.g., 30" required>
+
+    <button type="button" onclick="calculateProgress()">Calculate Progress</button>
+    <button type="button" onclick="saveProgress()">Save Progress</button>
+
+  </form>
+
+  <!-- RESULTS AREA -->
+  <div class="results" id="resultsBox">
+
+    <h3>📊 Progress Results</h3>
+
+    <p id="percentComplete">Completed: 0%</p>
+    <p id="finishEstimate">Estimated Days to Finish: 0</p>
+
+    <div class="progress-bar">
+      <div id="progressFill"></div>
+    </div>
+
+  </div>
+
+</section>
+
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Readify | Reading Flow</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+  <link rel="icon" href="pic/icon.jpg" type="image/jpg">
+
+  <link rel="stylesheet" href="Css/nav.css">
+  <link rel="stylesheet" href="Css/flow.css">
+
+  <!-- Add defer so DOM loads before JS runs -->
+    <script src="js/nav.js" defer></script>
+  <script src="js/flow.js" defer></script>
+  
+</head>
+
+<body>
+
+<header class="nav-header">
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="pic/logo.png" alt="Readify Logo" class="nav-logo">
+      <span class="brand">Readify</span>
+    </div>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="explorer.html">Explorer</a></li>
+      <li><a href="tracker.html">Tracker</a></li>
+      <li><a href="recommender.html">Recommender</a></li>
+      <li><a href="flow.html" class="active">Reading Flow</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="header">
+  <img src="pic/mind.webp" alt="Reading Flow" class="flow-logo">
+  <h1>Reading Flow</h1>
+  <p>Create your cozy reading mood + track completed books</p>
+</section>
+
+<section class="flow-container">
+
+  <!-- SOUND PLAYER -->
+  <div class="sound-box">
+    <h2>🎧 Cozy Background Sounds</h2>
+
+    <button onclick="playSound('rain')">Rain 🌧️</button> 
+    <button onclick="playSound('fire')">Fireplace 🔥</button>
+    <button onclick="playSound('piano')">Piano 🎹</button>
+
+    <button class="stop" onclick="stopSound()">Stop Sound ⛔</button>
+
+    <!-- Audio -->
+    <audio id="rainSound" src="sounds/rain.mp3" loop></audio>
+    <audio id="fireSound" src="sounds/fireplace.mp3" loop></audio>
+    <audio id="pianoSound" src="sounds/piano.mp3" loop></audio>
+  </div>
+
+  <!-- COMPLETED BOOK TRACKER -->
+  <div class="completed-box">
+    <h2>📗 Completed Books</h2>
+
+    <input id="completedInput" type="text" placeholder="Enter completed book title">
+
+    <button onclick="addCompleted()">Add to Completed ✔️</button>
+
+    <ul id="completedList"></ul>
+  </div>
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Readify | Feedback</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+  <link rel="icon" href="pic/icon.jpg" type="image/jpg">
+
+  <!-- your navbar styles -->
+  <link rel="stylesheet" href="Css/nav.css">
+
+  <!-- page styles -->
+  <link rel="stylesheet" href="Css/feedback.css">
+
+  <!-- navbar JS if you have hamburger logic -->
+  <script src="js/nav.js" defer></script>
+
+  <!-- feedback logic -->
+  <script src="js/feedback.js" defer></script>
+</head>
+
+<body>
+
+<header class="nav-header">
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="pic/logo.png" alt="Readify Logo" class="nav-logo">
+      <span class="brand">Readify</span>
+    </div>
+
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="explorer.html">Explorer</a></li>
+      <li><a href="tracker.html">Tracker</a></li>
+      <li><a href="recommender.html">Recommender</a></li>
+      <li><a href="flow.html">Reading Flow</a></li>
+      <li><a href="feedback.html" class="active">Feedback</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="header">
+  <h1>📝 Feedback</h1>
+  <p>We’d love to hear from you</p>
+</section>
+
+<section class="feedback-container">
+
+  <!-- FEEDBACK FORM -->
+  <div class="box">
+    <h2>📮 Send us your feedback</h2>
+
+    <form id="feedbackForm">
+      <input id="name" type="text" placeholder="Your Name" required>
+
+      <input id="email" type="email" placeholder="Your Email" required>
+
+      <textarea id="message" placeholder="Your Message" required></textarea>
+
+      <button type="submit">Submit Feedback</button>
+
+      <div id="successMessage" class="success"></div>
+    </form>
+  </div>
+
+  <!-- FAQ SECTION -->
+  <div class="box">
+    <h2>❓ FAQ</h2>
+
+    <div class="faq-item">
+      <div class="faq-question">How is my feedback used?</div>
+      <div class="faq-answer">
+        We use your feedback to improve features and fix issues in Readify.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Can I delete my stored feedback?</div>
+      <div class="faq-answer">
+        Your feedback is saved locally in your browser. Clear site data to remove it.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Do I need an account?</div>
+      <div class="faq-answer">
+        No account is required to submit feedback.
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+</body>
+</html>

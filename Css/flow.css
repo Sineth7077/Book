@@ -1,0 +1,86 @@
+body{
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f8fafc;
+}
+
+.header{
+  text-align:center;
+  padding:25px 10px;
+}
+
+.flow-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.flow-logo {
+  width: 140px;      /* change size here */
+  height: 140px;
+  object-fit: contain;
+}
+
+/* MAIN LAYOUT */
+.flow-container{
+  max-width:900px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+  padding:20px;
+}
+
+.sound-box, 
+.completed-box{
+  background:white;
+  padding:20px;
+  border-radius:15px;
+  box-shadow:0 5px 18px rgba(0,0,0,.1);
+}
+
+/* 👇 SCOPED BUTTONS — DOES NOT TOUCH NAVBAR */
+.flow-container button{
+  padding:10px;
+  margin:5px 0;
+  width:100%;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+  background:#2563eb;
+  color:white;
+  font-size:15px;
+}
+
+.flow-container button.stop{
+  background:#dc2626;
+}
+
+/* 👇 SCOPED INPUT */
+.flow-container input{
+  width:100%;
+  padding:10px;
+  border-radius:10px;
+  border:1px solid #cbd5f5;
+  margin-bottom:10px;
+}
+
+/* 👇 SCOPED LISTS */
+.flow-container ul{
+  padding-left:0;
+}
+
+.flow-container ul li{
+  background:#f1f5f9;
+  padding:8px;
+  margin-top:5px;
+  border-radius:8px;
+  list-style:none;
+}
+
+/* RESPONSIVE */
+@media(max-width:850px){
+  .flow-container{
+    grid-template-columns:1fr;
+  }
+}

@@ -1,0 +1,94 @@
+body{
+  font-family: Arial, sans-serif;
+  margin:0;
+  background:#f8fafc;
+}
+
+.header{
+  text-align:center;
+  padding:25px 10px;
+}
+
+/* layout */
+.feedback-container{
+  max-width:900px;
+  margin:auto;
+  padding:20px;
+  display:grid;
+  gap:25px;
+  grid-template-columns:1fr 1fr;
+}
+
+.box{
+  background:white;
+  padding:20px;
+  border-radius:15px;
+  box-shadow:0 5px 18px rgba(0,0,0,.1);
+}
+
+.box h2{
+  margin-top:0;
+}
+
+/* form controls */
+form input,
+form textarea{
+  width:100%;
+  padding:10px;
+  border-radius:10px;
+  border:1px solid #cbd5e1;
+  margin-bottom:12px;
+  font-size:15px;
+}
+
+textarea{
+  resize: vertical;
+  min-height:120px;
+}
+
+/* submit button */
+form button{
+  width:100%;
+  padding:10px;
+  background:#2563eb;
+  color:white;
+  border:none;
+  font-size:16px;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+form button:hover{
+  background:#1d4ed8;
+}
+
+/* success text */
+.success{
+  color:#16a34a;
+  margin-top:8px;
+  font-weight:bold;
+}
+
+/* FAQ accordion */
+.faq-item{
+  border-bottom:1px solid #e2e8f0;
+  padding:10px 0;
+  cursor:pointer;
+}
+
+.faq-question{
+  font-weight:bold;
+}
+
+.faq-answer{
+  display:none;
+  margin-top:6px;
+  color:#444;
+}
+
+/* responsive */
+@media(max-width:850px){
+  .feedback-container{
+    grid-template-columns:1fr;
+  }
+}

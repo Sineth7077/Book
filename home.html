@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Readify | Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="icon" href="pic/icon.jpg" type="image/jpg">
+
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="Css/style.css">
+  <link rel="stylesheet" href="Css/nav.css">
+
+  <!-- JavaScript -->
+  <script defer src="js/home.js"></script>
+  <script defer src="js/nav.js"></script>
+
+</head>
+<body>
+
+  <!-- ================= NAVIGATION ================= -->
+<header class="nav-header">
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="pic/logo.png" alt="Readify Logo" class="nav-logo">
+      <span class="brand">Readify</span>
+    </div>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="home.html" class="active">Home</a></li>
+      <li><a href="explorer.html">Explorer</a></li>
+      <li><a href="tracker.html">Tracker</a></li>
+      <li><a href="recommender.html">Recommender</a></li>
+      <li><a href="flow.html">Reading Flow</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2 id="quote">“A reader lives a thousand lives.”</h2>
+      <p>Find your next great read with Readify.</p>
+    </div>
+
+    <div class="hero-image"></div>
+  </section>
+
+  <!-- ================= AUTHOR OF THE DAY ================= -->
+  <section class="author-section">
+    <h3>Author of the Day</h3>
+    <p id="authorName"></p>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Footer Navigation Links -->
+    <div class="footer-links">
+      <a href="home.html">Home</a>
+      <a href="explorer.html">Book Explorer</a>
+      <a href="tracker.html">Progress Tracker</a>
+      <a href="recommender.html">Recommender</a>
+      <a href="flow.html">Reading Flow</a>
+      <a href="feedback.html">Feedback</a>
+    </div>
+
+    <!-- Newsletter Section -->
+    <div class="newsletter">
+      <h4>Join Our Newsletter</h4>
+      <p>Get book recommendations and reading tips.</p>
+
+      <div class="newsletter-form">
+        <input type="email" id="newsletterEmail" placeholder="Enter your email">
+        <button onclick="subscribe()">Subscribe</button>
+      </div>
+    </div>
+
+    <p class="footer-text">© 2025 Readify. All rights reserved.</p>
+
+  </div>
+</footer>
+
+
+</body>
+</html>

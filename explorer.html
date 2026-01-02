@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Readify | Book Explorer</title>
+    <!-- Favicon -->
+  <link rel="icon" href="pic/icon.jpg" type="image/jpg">
+
+  <!-- SEO -->
+  <meta name="description" content="Explore books by genre and author, read reviews, and discover your next great read with Readify Book Explorer.">
+
+  <!-- Responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/ex.css">
+  <link rel="stylesheet" href="css/nav.css">
+
+  <!-- JavaScript (ORDER MATTERS) -->
+  <script src="js/books.js" defer></script>
+  <script src="js/explorer.js" defer></script>
+  <script src="js/nav.js" defer></script>
+</head>
+
+<body>
+
+  <!-- ================= NAVIGATION ================= -->
+  <header class="nav-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="nav-left">
+        <img src="pic/logo.png" alt="Readify Logo" class="nav-logo">
+        <span class="brand">Readify</span>
+      </div>
+
+      <button
+        class="hamburger"
+        id="hamburger"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="navLinks">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="explorer.html" aria-current="page">Explorer</a></li>
+        <li><a href="tracker.html">Tracker</a></li>
+        <li><a href="recommender.html">Recommender</a></li>
+        <li><a href="flow.html">Reading Flow</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <h1>Book Explorer</h1>
+    <p>Search, explore and discover your next great read</p>
+  </section>
+
+  <!-- Filters -->
+  <section class="filters" aria-label="Book filters">
+
+    <label for="searchInput" class="visually-hidden">Search books</label>
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search by title or author">
+
+    <label for="genreFilter" class="visually-hidden">Filter by genre</label>
+    <select id="genreFilter">
+      <option value="all">All Genres</option>
+      <option value="Fantasy">Fantasy</option>
+      <option value="Science Fiction">Science Fiction</option>
+      <option value="Romance">Romance</option>
+      <option value="Mystery">Mystery</option>
+      <option value="Non-Fiction">Non-Fiction</option>
+    </select>
+
+    <label for="authorFilter" class="visually-hidden">Filter by author</label>
+    <select id="authorFilter">
+      <option value="all">All Authors</option>
+    </select>
+
+  </section>
+
+  <!-- Book Grid -->
+  <section
+    class="book-grid"
+    id="bookGrid"
+    aria-live="polite"
+    aria-label="Book results">
+    <!-- Cards created dynamically in explorer.js -->
+  </section>
+
+  <!-- Modal -->
+  <div
+    class="modal"
+    id="bookModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalTitle"
+    aria-hidden="true">
+
+    <div class="modal-content">
+
+      <button
+        class="close"
+        id="closeModal"
+        aria-label="Close book details">
+        &times;
+      </button>
+
+      <!-- FIX 1: img now has a valid src -->
+      <img
+        id="modalImage"
+        class="modal-img"
+        src="pic/img01.webp"
+        alt="Selected book cover">
+
+      <!-- FIX 2: headings are no longer empty -->
+      <h2 id="modalTitle">Book title</h2>
+      <h4 id="modalAuthor">Author name</h4>
+
+      <p id="modalSynopsis"></p>
+
+      <h3>Sequels / Prequels</h3>
+      <ul id="modalSeriesList"></ul>
+
+      <h3>Ratings & Reviews</h3>
+      <table id="reviewsTable">
+        <thead>
+          <tr>
+            <th scope="col">Reviewer</th>
+            <th scope="col">Rating</th>
+            <th scope="col">Comment</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+    </div>
+  </div>
+
+</body>
+</html>

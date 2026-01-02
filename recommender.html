@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Readify | Random Book Recommender</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+  <link rel="icon" href="pic/icon.jpg" type="image/jpg">
+
+  <link rel="stylesheet" href="Css/nav.css">
+  <link rel="stylesheet" href="Css/recommender.css">
+</head>
+
+<body>
+
+<header class="nav-header">
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="pic/logo.png" alt="Readify Logo" class="nav-logo">
+      <span class="brand">Readify</span>
+    </div>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="explorer.html">Explorer</a></li>
+      <li><a href="tracker.html">Tracker</a></li>
+      <li><a href="recommender.html" class="active">Recommender</a></li>
+      <li><a href="flow.html">Reading Flow</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="header">
+  <h1>🎲 Random Book Recommender</h1>
+  <p>Tell us what you like — we’ll surprise you!</p>
+</section>
+
+<section class="recommender-box">
+
+  <div class="selectors">
+
+    <label>Choose Genre</label>
+    <select id="genreSelect">
+      <option value="any">Any</option>
+      <option value="Fantasy">Fantasy</option>
+      <option value="Science Fiction">Science Fiction</option>
+      <option value="Romance">Romance</option>
+      <option value="Mystery">Mystery</option>
+      <option value="Non-Fiction">Non-Fiction</option>
+    </select>
+
+    <label>Book Length</label>
+    <select id="lengthSelect">
+      <option value="any">Any</option>
+      <option value="short">Short (&lt; 200 pages)</option>
+      <option value="medium">Medium (200–400 pages)</option>
+      <option value="long">Long (&gt; 400 pages)</option>
+    </select>
+
+    <button id="recommendBtn">Recommend Book 🎲</button>
+    <button id="pickAgainBtn">Pick Again 🔁</button>
+  </div>
+
+  <div class="result" id="resultBox">
+    <h2 id="bookTitle">No book selected yet</h2>
+    <p id="bookAuthor"></p>
+    <p id="bookGenre"></p>
+    <p id="bookLength"></p>
+  </div>
+
+  <button id="saveBtn">Save to Reading List ⭐</button>
+
+</section>
+
+<section class="saved-list">
+  <h2>⭐ My Reading List</h2>
+  <ul id="readingListDisplay"></ul>
+</section>
+
+<script src="js/Rbooks.js"></script>
+<script src="js/recommender.js"></script>
+<script src="js/nav.js"></script>
+
+</body>
+</html>
