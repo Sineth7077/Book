@@ -4,85 +4,104 @@
   <meta charset="UTF-8">
   <title>Readify | Reading Progress Tracker</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Favicon -->
+
+  <!-- Favicon -->
   <link rel="icon" href="pic/icon.jpg" type="image/jpg">
 
+  <!-- CSS -->
   <link rel="stylesheet" href="Css/traker.css">
-    <link rel="stylesheet" href="Css/nav.css">
+  <link rel="stylesheet" href="Css/nav.css">
 
-  <script src="js/traker.js"></script>
-    <script src="js/nav.js" defer></script>
+  <!-- JavaScript -->
+  <script src="js/traker.js" defer></script>
+  <script src="js/nav.js" defer></script>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<header class="nav-header">
-  <nav class="navbar">
-    <div class="nav-left">
-      <img src="pic/logo.png" alt="Readify Logo" class="nav-logo">
-      <span class="brand">Readify</span>
+  <!-- ================= NAVBAR ================= -->
+  <header class="nav-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="nav-left">
+        <img src="pic/logo.png" alt="Readify Logo" class="nav-logo">
+        <span class="brand">Readify</span>
+      </div>
+
+      <button
+        class="hamburger"
+        id="hamburger"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="navLinks">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="explorer.html">Explorer</a></li>
+        <li><a href="tracker.html" class="active" aria-current="page">Tracker</a></li>
+        <li><a href="recommender.html">Recommender</a></li>
+        <li><a href="flow.html">Reading Flow</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ================= PAGE HEADER ================= -->
+  <section class="header-section">
+    <h1>Reading Progress Tracker</h1>
+    <p>Track your reading journey and stay motivated 📖</p>
+  </section>
+
+  <!-- ================= TRACKER ================= -->
+  <section class="tracker-container">
+
+    <form id="trackerForm">
+
+      <label for="totalPages">Total Pages in Book</label>
+      <input
+        type="number"
+        id="totalPages"
+        placeholder="e.g., 350"
+        required>
+
+      <label for="pagesRead">Pages Read So Far</label>
+      <input
+        type="number"
+        id="pagesRead"
+        placeholder="e.g., 120"
+        required>
+
+      <label for="readingSpeed">Daily Reading Speed (pages/day)</label>
+      <input
+        type="number"
+        id="readingSpeed"
+        placeholder="e.g., 30"
+        required>
+
+      <button type="button" onclick="calculateProgress()">Calculate Progress</button>
+      <button type="button" onclick="saveProgress()">Save Progress</button>
+
+    </form>
+
+    <!-- ================= RESULTS ================= -->
+    <div class="results" id="resultsBox" aria-live="polite">
+
+      <!-- FIXED: h3 → h2 (correct hierarchy) -->
+      <h2>📊 Progress Results</h2>
+
+      <p id="percentComplete">Completed: 0%</p>
+      <p id="finishEstimate">Estimated Days to Finish: 0</p>
+
+      <div class="progress-bar" aria-hidden="true">
+        <div id="progressFill"></div>
+      </div>
+
     </div>
 
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="explorer.html">Explorer</a></li>
-      <li><a href="tracker.html" class="active">Tracker</a></li>
-      <li><a href="recommender.html">Recommender</a></li>
-      <li><a href="flow.html">Reading Flow</a></li>
-      <li><a href="feedback.html">Feedback</a></li>
-    </ul>
-  </nav>
-</header>
-
-<!-- PAGE TITLE -->
-<section class="header-section">
-  <h1>Reading Progress Tracker</h1>
-  <p>Track your reading journey and stay motivated 📖</p>
-</section>
-
-<!-- TRACKER CARD -->
-<section class="tracker-container">
-
-  <form id="trackerForm">
-
-    <label>Total Pages in Book</label>
-    <input type="number" id="totalPages" placeholder="e.g., 350" required>
-
-    <label>Pages Read So Far</label>
-    <input type="number" id="pagesRead" placeholder="e.g., 120" required>
-
-    <label>Daily Reading Speed (pages/day)</label>
-    <input type="number" id="readingSpeed" placeholder="e.g., 30" required>
-
-    <button type="button" onclick="calculateProgress()">Calculate Progress</button>
-    <button type="button" onclick="saveProgress()">Save Progress</button>
-
-  </form>
-
-  <!-- RESULTS AREA -->
-  <div class="results" id="resultsBox">
-
-    <h3>📊 Progress Results</h3>
-
-    <p id="percentComplete">Completed: 0%</p>
-    <p id="finishEstimate">Estimated Days to Finish: 0</p>
-
-    <div class="progress-bar">
-      <div id="progressFill"></div>
-    </div>
-
-  </div>
-
-</section>
-
+  </section>
 
 </body>
 </html>
-
